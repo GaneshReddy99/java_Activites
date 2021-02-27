@@ -1,0 +1,67 @@
+
+public class Vehicles {
+	private String make;
+	private String vechicleNumber;
+	private int fuelCapacity;
+	private int cc;
+	private String fuelType;
+	
+	
+	public Vehicles() {
+		super();
+	}
+	public Vehicles(String make, String vechicleNumber, int fuelCapacity,String fuelType, int cc) {
+		super();
+		this.make = make;
+		this.vechicleNumber = vechicleNumber;
+		this.fuelCapacity = fuelCapacity;
+		this.fuelType=fuelType;
+		this.cc = cc;
+	}
+	public String getFuelType() {
+		return fuelType;
+	}
+	public void setFuelType(String fuelType) {
+		this.fuelType = fuelType;
+	}
+	public String getMake() {
+		return make;
+	}
+	public void setMake(String make) {
+		this.make = make;
+	}
+	public String getVechicleNumber() {
+		return vechicleNumber;
+	}
+	public void setVechicleNumber(String vechicleNumber) {
+		this.vechicleNumber = vechicleNumber;
+	}
+	public int getFuelCapacity() {
+		return fuelCapacity;
+	}
+	public void setFuelCapacity(int fuelCapacity) {
+		this.fuelCapacity = fuelCapacity;
+	}
+	public int getCc() {
+		return cc;
+	}
+	public void setCc(int cc) {
+		this.cc = cc;
+	}
+	void displayMake() {
+		System.out.println("***"+make+"***");
+	}
+	void displayBasicInfo() {
+		System.out.println("VechicleNumber"+vechicleNumber);
+		System.out.println("FuelCapacity"+fuelCapacity);
+		System.out.println("FuelType"+fuelType);
+		System.out.println("CCe"+cc);
+		
+	}
+	void displayDetailInfo() {
+		
+	}
+	
+
+
+}
