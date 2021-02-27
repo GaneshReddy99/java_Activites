@@ -1,0 +1,95 @@
+import java.util.*;
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		
+		System.out.println("1.Four Wheeler\r\n"
+				+ "2.Two Wheeler\r\n"
+				+ "");
+		int n=sc.nextInt();
+		int x,y,z;
+		if(n==1)
+		{
+			
+			System.out.println("Vehicle Make:");
+			String fs1=sc.next();
+			System.out.println("Vehicle Number:");
+			String fs2=sc.next();
+			System.out.println("Fuel Type:\r\n"
+					+ "1.Petrol\r\n"
+					+ "2.Diesel\r\n"
+					+ "");
+			int w=sc.nextInt();
+			String fy="";
+			if(w==1)
+			{
+				fy="Petorl";
+			}
+			else if(w==2)
+			{
+				fy="Diesel";
+			}
+			System.out.println("Fuel Capacity:");
+			x=sc.nextInt();
+			System.out.println("Engine CC:");
+			y=sc.nextInt();
+			System.out.println("Audio System:");
+			String fs3=sc.next();
+			System.out.println("Number of Doors:");
+			z=sc.nextInt();
+			FourWheeler Fw=new FourWheeler(fs1, fs2, x,fy,y,fs3,z);
+			Fw.displayMake();
+			Fw.displayBasicInfo();
+			Fw.displayDetailInfo();
+		
+			
+		}
+		else if(n==2);
+		{
+			
+			System.out.println("Vehicle Make:");
+			String fs1=sc.next();
+			System.out.println("Vehicle Number:");
+			String fs2=sc.next();
+			System.out.println("Fuel Type:\r\n"
+					+ "1.Petrol\r\n"
+					+ "2.Diesel\r\n"
+					+ "");
+			int w=sc.nextInt();
+			String fy="";
+			if(w==1)
+			{
+				fy="Petorl";
+			}
+			else if(w==2)
+			{
+				fy="Diesel";
+			}
+			System.out.println("Fuel Capacity:");
+			x=sc.nextInt();
+			System.out.println("Engine CC:");
+			y=sc.nextInt();
+			System.out.println("KickStartAvailable");
+			String fs3=sc.next();
+			boolean b=true;
+			if(fs3.equalsIgnoreCase("YES"))
+			{
+				b=true;
+			}
+			else
+			{
+				b=false;
+			}
+			TwoWheeler Tw=new TwoWheeler(fs1, fs2, x,fy,y,b);
+			Tw.displayMake();
+			Tw.displayBasicInfo();
+			Tw.displayDetailInfo();
+			
+		}
+		
+
+	}
+
+}
