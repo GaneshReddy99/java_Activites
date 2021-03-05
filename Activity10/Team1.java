@@ -1,27 +1,28 @@
 package ltts.com;
 
-import java.util.Comparator;
-
-public class TeamComparator implements Comparator<Team1>{
-
+public class Team1 {
+	private String name;
+	private long numberOfMatches;
+	public Team1(String name, long numberOfMatches) {
+		super();
+		this.name = name;
+		this.numberOfMatches = numberOfMatches;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public long getNumberOfMatches() {
+		return numberOfMatches;
+	}
+	public void setNumberOfMatches(long numberOfMatches) {
+		this.numberOfMatches = numberOfMatches;
+	}
 	@Override
-	public int compare(Team1 t1, Team1 t2) {
-		// TODO Auto-generated method stub
-		if(t1.getNumberOfMatches()==t2.getNumberOfMatches())
-		{
-			return 0;
-		}
-		else if(t1.getNumberOfMatches()>t2.getNumberOfMatches())
-		{
-			return 1;
-		}
-		else
-		{
-			return -1;
-		}
+	public String toString() {
+		return  name + "--" + numberOfMatches;
 	}
 	
-
 }
-
-
